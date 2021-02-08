@@ -1,0 +1,32 @@
+<h2>Ad List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Land Size</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Garage Spaces</th>
+            <th>Address</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ad of ads">
+            <td>{{ad.name}}</td>
+            <td>{{ad.landSize}}</td>    
+            <td>{{ad.numberOfBedrooms}}</td>    
+            <td>{{ad.numberOfBathrooms}}</td>
+            <td>{{ad.numberOfGarageSpaces}}</td>    
+            <td>{{ad.address}}</td>
+            <td>{{ad.price}}</td>
+            <td>
+                <button (click)="updateAd(ad.id)" class="btn btn-info" >Update</button>
+                <button (click)="deleteAd(ad.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)="adDetails(ad.id)" class="btn btn-info" style="margin-left: 10px;"> Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
