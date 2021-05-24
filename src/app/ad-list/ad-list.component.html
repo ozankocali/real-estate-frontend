@@ -1,24 +1,39 @@
-<h2>Ad List</h2>
+<h2 class="text-center">Ad List</h2>
 
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div *ngFor="let ad of ads" class="row">
-            <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-                <div class="block-7">
-                    <div class="img" style="background-image: url(https://via.placeholder.com/350x280/FFB6C1/000000);"></div>
-                    <div class="text-center p-4">
-                        <span class="excerpt d-block">{{ad.name}}</span>
-                        <span class="price"><sup>$</sup> <span class="number">{{ad.price}}</span></span>
-                        <ul class="pricing-text mb-5">
-                            <li><span class="fa fa-check mr-2"></span>{{ad.numberOfBedrooms}} Bedrooms</li>
-                            <li><span class="fa fa-check mr-2"></span>{{ad.numberOfBathrooms}} Bathrooms</li>
-                            <li><span class="fa fa-check mr-2"></span>{{ad.numberOfGarageSpaces}} Garage Spaces</li>
-                            <li><span class="fa fa-check mr-2"></span>{{ad.landSize}} ft<sup>2</sup></li>
-                        </ul>
-                        <a (click)="adDetails(ad.id)" class="btn btn-primary d-block px-2 py-3">Go to Details</a>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdey">
+    <div *ngFor="let ad of ads" class="row">
+        <div class="col-md-8" >
+            <div class="wp-block property list">
+                <div class="wp-block-title">
+                    <h3><a>{{ad.address}}</a></h3>
+                </div>
+                <div class="wp-block-body">
+                    <div class="wp-block-img">
+                        <a (click)="adDetails(ad.id)">
+                            <img src="https://via.placeholder.com/300x300/FFB6C1/000000" alt="">
+                        </a>
                     </div>
+                    <div class="wp-block-content">
+                        <h4 class="content-title">{{ad.name}}</h4>
+                        <p class="description">{{ad.description}}</p>
+                        <span class="pull-left">
+                            <span class="price">${{ad.price}}</span>
+                        </span>
+                        <br>
+                        <button (click)="adDetails(ad.id)" class="btn btn-info"> Details</button>
+                    </div>
+                </div>
+                <div class="wp-block-footer">
+                    <ul class="aux-info">
+                        <li><i class="fa fa-building"></i>{{ad.landSize}}<sup>2</sup> Feet</li>
+                        <li><i class="fa fa-user"></i> {{ad.numberOfBedrooms}} Bedrooms</li>
+                        <li><i class="fa fa-tint"></i> {{ad.numberOfBathrooms}} Bathrooms</li>
+                        <li><i class="fa fa-car"></i> {{ad.numberOfGarageSpaces}} Garages</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

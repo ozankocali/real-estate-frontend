@@ -7,4 +7,5 @@ export class Ad {
     numberOfBathrooms:number;
     numberOfGarageSpaces:number;
     landSize:number;
+    description:string;
 }
