@@ -1,25 +1,51 @@
-<h3>Ad Details</h3>
+<h3 class="text-center">Ad Details</h3>
 
-<div>
-    <div>
-        <label><b>Name:</b></label> {{ad.name}}
-    </div>
-    <div>
-        <label><b>Land Size:</b></label> {{ad.landSize}}
-    </div>
-    <div>
-        <label><b>Bedrooms:</b></label> {{ad.numberOfBedrooms}}
-    </div>
-    <div>
-        <label><b>Bathrooms:</b></label> {{ad.numberOfBathrooms}}
-    </div>
-    <div>
-        <label><b>Garage Spaces:</b></label> {{ad.numberOfGarageSpaces}}
-    </div>
-    <div>
-        <label><b>Address:</b></label> {{ad.address}}
-    </div>
-    <div>
-        <label><b>Price:</b></label> {{ad.price}}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="estate">
+    <div class="container bootstrap snippets bootdey">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="product-gallery">
+                            <div class="primary-image">
+                                <a href="#" class="theater" rel="group" hidefocus="true">
+                                    <img src="https://via.placeholder.com/600x300/FF69B4/000000" class="img-responsive"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="product-info">
+                            <h3>{{ad.address}}</h3>
+                            <div class="wp-block property list no-border">
+                                <div class="wp-block-content clearfix">
+                                    <h4 class="content-title">{{ad.name}}</h4>
+                                    <p class="description mb-15">{{ad.description}}
+                                    </p>
+                                    <span class="pull-left">
+                                        <span class="price">${{ad.price}}</span>
+                                    </span>
+                                </div>
+                                <div class="wp-block-footer style2 mt-15">
+                                    <ul class="aux-info">
+                                        <li><i class="fa fa-building"></i>{{ad.landSize}}<sup>2</sup> Feet</li>
+                                        <li><i class="fa fa-user"></i>{{ad.numberOfBedrooms}} Bedrooms</li>
+                                        <li><i class="fa fa-tint"></i>{{ad.numberOfBathrooms}} Bathrooms</li>
+                                        <li><i class="fa fa-car"></i>{{ad.numberOfGarageSpaces}} Garages</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="clearfix"></span>
+                            <button (click)="deleteAd(ad.id)" class="btn btn-danger"
+                                style="margin-left: 10px;">Delete</button>
+                            <button (click)="updateAd(ad.id)" class="btn btn-info"
+                                style="margin-left: 10px;">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

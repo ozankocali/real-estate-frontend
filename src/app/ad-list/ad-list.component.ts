@@ -26,15 +26,6 @@ export class AdListComponent implements OnInit {
     })
   }
 
-  updateAd(id:number){
-    this.router.navigate(["update-ad",id])
-  }
-
-  deleteAd(id:number){
-    this.adService.deleteAd(id).subscribe(data=>{
-      this.getAds();
-    })
-  }
 
   adDetails(id:number){
     this.router.navigate(["ad-details",id]);
