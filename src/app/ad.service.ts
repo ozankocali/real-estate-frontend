@@ -8,7 +8,7 @@ import { Ad } from './ad';
 })
 export class AdService {
 
-  private baseUrl="http://localhost:8090/api/v1/ads";
+  private baseUrl="http://localhost:8090/api/v1/properties";
 
   constructor(private httpClient:HttpClient) {}
     getAdsList():Observable<Ad[]>{
