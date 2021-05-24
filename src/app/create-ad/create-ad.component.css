@@ -1,0 +1,18 @@
+.jumbotron label {
+    font-size:12px;    
+}
+
+.reg-icon{
+    color:#6b6f82;
+    font-weight:bold;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+.prj-name{
+    font-weight:bold;
+    color:#5bc0de;
+}
