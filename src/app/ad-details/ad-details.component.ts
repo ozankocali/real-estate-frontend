@@ -32,6 +32,7 @@ export class AdDetailsComponent implements OnInit {
     this.adService.deleteAd(id).subscribe(data=>{
       
     })
+    this.router.navigate(['/ads'])
   }
 
 }
